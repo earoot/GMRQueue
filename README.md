@@ -8,10 +8,42 @@ Some of the laravel packages used in this project are:
   - Laravel Horizon [https://laravel.com/docs/7.x/horizon]
   - Laravel Queue [https://laravel.com/docs/5.8/queues]
 
-# Pre-requisites:
+## Pre-requisites:
 
   - PHP >= 7.2.5
   - Redis >= 4.0.x
   - MySQL 5.7.x
 
 All the server requirements of a laravel application are also required to execute this project (composer, extensions, etc), you can find more information on the official website [https://laravel.com/docs/7.x].
+
+## Installation
+
+    $ git clone https://github.com/earoot/GMRQueue.git
+    $ cd GMRQueue/
+
+Create .env file from .env.example and fill the database and redis information, also verify that the QUEUE_CONNECTION is set to redis.
+
+RUN THE FOLLOWING COMMANDS TO CONFIGURE AND FINISH INSTALLATION:
+
+    $ composer install
+    $ php artisan key:generate
+    $ php artisan passport:install
+    $ php artisan config:cache
+    $ chmod -R 777 storage/
+    $ chmod -R 777 bootstrap/cache
+
+## RUN SERVER (LOCALLY)
+
+Open the terminal and go to the project folder (you may need to open several tabs), then you would need to run the following commands (each per tabs/window):
+
+    $ php artisan serve
+    $ php artisan horizon
+    $ php artisan queue:work --queue=high,low
+
+### Aditional Information:
+ - In the utils folder you would find a postman collection (GMRqueue_postman_collection.json) with all the endpoints related to this project, you can import it into your postman account and replace the parameters.
+
+ - If you are looking to run this project on a server, you may need to install supervisor [http://supervisord.org/]
+
+
+    
