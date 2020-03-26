@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "020fe30f-4efc-4509-b692-2bcf286c096b",
+		"name": "GMRQueue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Schedule Jobs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjZiMWQxYWFhN2JlOTZjNzA5NDNhZjAwMWE5ZjI3YzRlNTZlNjI5NWE1NTRiMWRmN2U3MGFmZWQ4Y2FjNDU3NzhiOGFiZTlhNzUxNGU4MGEiLCJpYXQiOjE1ODUyMzE1MDQsIm5iZiI6MTU4NTIzMTUwNCwiZXhwIjoxNjE2NzY3NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.5XbR4_77S920ZSgHnTqmUZ3qNrdlj-KcY6czWr4SAJb1hyseqVhQMs3wB7Ob4dF-BT5LBh105TDtY2Rh_VzT86D5je0e0zUqEOAZTCgsIueSNveuS9hCPjBRQIjtvW9kFC6Qtq8MUQaFlNZdC8QyDVEM7Bi2RGAiq7S9JNbjE6_Vi5eO4_xpL-eKKPN6F2gkHl84axnnM_ZuORVH7HnzlOyX1v7NgPHuQiyWlJ0iKzSOT7cFkLonfullFwU2yrD4OTsw5Dab7rJEoQOeIJu0iQEvEwpgHedpLLQP__AS2t3IxZJh-ABNF3lKry0gXPr8Fx6XAvXkHBqDC_RGvpqGSvoOluTH0x76jK7l0aMBvlEBpScIx29WcniZ-z3dHuKcVZHozmo4ipijtEAWhOOMAfthrBiGSaZphpu7fsRS5w85VFTW0IczYJX4uAJHrC864ueFRZQ2uoRoW0N49iv_xHh04PekGvUQDqroqxxHqdLit2WJPUiREyRVSgRf5RcD8W8SPZ9r680Xd67sINQUYOHF0b-5m2WIk7mVTNcbo9v4UCVuB5090MCaHtCVO_9q3a92OjKkvAMfwHQDsQL_-Y9hPmZ3N67snyxf1U5ZXVi4J1UBgPHI13euyKTYJK6CkHt73DDtdU9V569AixtoT4yCydRrtFv3hm7H_hdjV_E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://3.90.154.57/api/v1/schedule?total=1000&delay=0&priority=low",
+					"protocol": "http",
+					"host": [
+						"3",
+						"90",
+						"154",
+						"57"
+					],
+					"path": [
+						"api",
+						"v1",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "total",
+							"value": "1000"
+						},
+						{
+							"key": "delay",
+							"value": "0"
+						},
+						{
+							"key": "priority",
+							"value": "low"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List jobs by group",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjZiMWQxYWFhN2JlOTZjNzA5NDNhZjAwMWE5ZjI3YzRlNTZlNjI5NWE1NTRiMWRmN2U3MGFmZWQ4Y2FjNDU3NzhiOGFiZTlhNzUxNGU4MGEiLCJpYXQiOjE1ODUyMzE1MDQsIm5iZiI6MTU4NTIzMTUwNCwiZXhwIjoxNjE2NzY3NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.5XbR4_77S920ZSgHnTqmUZ3qNrdlj-KcY6czWr4SAJb1hyseqVhQMs3wB7Ob4dF-BT5LBh105TDtY2Rh_VzT86D5je0e0zUqEOAZTCgsIueSNveuS9hCPjBRQIjtvW9kFC6Qtq8MUQaFlNZdC8QyDVEM7Bi2RGAiq7S9JNbjE6_Vi5eO4_xpL-eKKPN6F2gkHl84axnnM_ZuORVH7HnzlOyX1v7NgPHuQiyWlJ0iKzSOT7cFkLonfullFwU2yrD4OTsw5Dab7rJEoQOeIJu0iQEvEwpgHedpLLQP__AS2t3IxZJh-ABNF3lKry0gXPr8Fx6XAvXkHBqDC_RGvpqGSvoOluTH0x76jK7l0aMBvlEBpScIx29WcniZ-z3dHuKcVZHozmo4ipijtEAWhOOMAfthrBiGSaZphpu7fsRS5w85VFTW0IczYJX4uAJHrC864ueFRZQ2uoRoW0N49iv_xHh04PekGvUQDqroqxxHqdLit2WJPUiREyRVSgRf5RcD8W8SPZ9r680Xd67sINQUYOHF0b-5m2WIk7mVTNcbo9v4UCVuB5090MCaHtCVO_9q3a92OjKkvAMfwHQDsQL_-Y9hPmZ3N67snyxf1U5ZXVi4J1UBgPHI13euyKTYJK6CkHt73DDtdU9V569AixtoT4yCydRrtFv3hm7H_hdjV_E",
+						"type": "text"
+					}
+				],
+				"url": "http://3.90.154.57/api/v1/jobs/501f6c3650bedae112b74d19e354b006"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://3.90.154.57/api/v1/login?email=mail@prueba.cl&password=123456",
+					"protocol": "http",
+					"host": [
+						"3",
+						"90",
+						"154",
+						"57"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mail@prueba.cl"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://3.90.154.57/api/v1/register?name=NAME LASTNAME&email=mail@prueba.cl&password=123456",
+					"protocol": "http",
+					"host": [
+						"3",
+						"90",
+						"154",
+						"57"
+					],
+					"path": [
+						"api",
+						"v1",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "NAME LASTNAME"
+						},
+						{
+							"key": "email",
+							"value": "mail@prueba.cl"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
