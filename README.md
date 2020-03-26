@@ -40,6 +40,12 @@ Open the terminal and go to the project folder (you may need to open several tab
     $ php artisan horizon
     $ php artisan queue:work --queue=high,low
 
+## API Documentation and Testing Environment
+
+ - Testing environment API prefix: http://3.90.154.57/api/v1/
+ - Horizon for testing: http://3.90.154.57/horizon
+ - API Docs: http://3.90.154.57/api-info
+
 ### Aditional Information:
  - In the utils folder you would find a postman collection (GMRqueue_postman_collection.json) with all the endpoints related to this project, you can import it into your postman account and replace the parameters.
 
