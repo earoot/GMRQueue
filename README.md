@@ -29,6 +29,7 @@ RUN THE FOLLOWING COMMANDS TO CONFIGURE AND FINISH INSTALLATION:
     $ php artisan key:generate
     $ php artisan passport:install
     $ php artisan config:cache
+    $ php artisan migrate
     $ chmod -R 777 storage/
     $ chmod -R 777 bootstrap/cache
 
