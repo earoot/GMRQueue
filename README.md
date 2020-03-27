@@ -46,10 +46,13 @@ Open the terminal and go to the project folder (you may need to open several tab
  - Horizon for testing: http://3.90.154.57/horizon
  - API Docs: http://3.90.154.57/api-info
 
+ ### Bash Script for testing:
+
+Another option for testing the queue is to execute the bash script contain into utils folder (executeQueue.sh), there are some arguments such as -e (email), -p (password), -q (quantity of jobs) and -t (priority of the jobs), this script is using the base url=http://3.90.154.57, in case you would want to test locally just need to change the base URL to point to your local url.
+
+    $ bash executeQueue.sh -e mail@test.cl -p 123456 -q 2 -t high
+
 ### Aditional Information:
  - In the utils folder you would find a postman collection (GMRqueue_postman_collection.json) with all the endpoints related to this project, you can import it into your postman account and replace the parameters.
 
  - If you are looking to run this project on a server, you may need to install supervisor [http://supervisord.org/]
-
-
-    

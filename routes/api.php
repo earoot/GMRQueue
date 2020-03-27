@@ -11,7 +11,7 @@ Route::prefix('v1')->group(function () {
 
   Route::post("login", "api\\v1\\LoginController@authenticate");
   Route::post("register", "api\\v1\\RegisterController@register");
-
+  Route::post("register-bash", "api\\v1\\RegisterController@registerBash");
 });
 
 Route::get("auth-failed", "api\\v1\\UsersController@authRequired")->name("authFailed");
